@@ -448,7 +448,7 @@ button { font-family: inherit; }
   .hero-quick {
     position: absolute;
     top: 50%;
-    right: calc(var(--side) + 60px);
+    right: calc(var(--side) + 260px);
     transform: translateY(-50%);
     width: 380px;
     padding: 32px;
