@@ -1,0 +1,9 @@
+{
+  "name": "pnhd-custom-zone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Выездная кастом-зона — лендинг Pinhead Studio",
+  "scripts": {
+    "dev": "npx serve . -l 3000"
+  }
+}
