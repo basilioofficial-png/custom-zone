@@ -557,6 +557,19 @@ button { font-family: inherit; }
 
 .format-card__title { font-size: clamp(24px, 4vw, 44px); }
 
+.format-card__price {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 8px 16px;
+  background: var(--black);
+  color: var(--lime);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1;
+}
+@media (min-width: 1024px) { .format-card__price { padding: 10px 20px; font-size: 28px; } }
+
 .note-rule {
   margin-top: 28px;
   max-width: 900px;
