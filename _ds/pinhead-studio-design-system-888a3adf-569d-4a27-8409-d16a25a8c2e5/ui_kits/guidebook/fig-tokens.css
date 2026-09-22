@@ -1,0 +1,9 @@
+/* Generated from Figma Variables. First mode = :root default.
+   FLOAT tokens are unitless — multiply by 1px in calc() where a length is needed. */
+
+:root {
+  --font-family-font-1: "Roboto Condensed";
+  --font-size-56: 56;
+  --font-weight-500: 500;
+  --letter-spacing-0-44: -0.44;
+}

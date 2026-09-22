@@ -1,0 +1,48 @@
+/* pinhead studio — layout, spacing and rule tokens.
+   Derived from the 1920×1080 Гайдбук grid, measured off the source frames. */
+:root{
+/* The guidebook page: a 1920×1080 sheet with a 60px top band, a 1860px-wide
+   rule stack, and a 60px right gutter holding the ✳ / ® marks. */
+--page-w:1920px;
+--page-h:1080px;
+--page-margin:22px;        /* nav label inset, x and y */
+--page-gutter:60px;        /* right-hand mark column, top band height */
+--page-rule-w:1860px;      /* horizontal rules stop short of the gutter */
+--page-band:60px;
+--page-title-top:93px;
+--page-title-left:19px;
+--page-mid:540px;          /* the centre rule */
+--page-col-2:952px;        /* second column / body copy origin */
+
+/* Spacing steps actually present in the file */
+--space-2:2px;--space-8:8px;--space-19:19px;--space-22:22px;--space-30:30px;
+--space-60:60px;--space-78:78px;--space-93:93px;--space-126:126px;--space-199:199px;
+
+/* Hairlines. Every rule in the guidebook is a 0.5px stroke rendered at 1px. */
+--rule-hairline:0.5px;
+--rule-width:1px;
+--border-hairline:1px solid var(--rule);
+--border-hairline-inverse:1px solid var(--rule-inverse);
+
+/* Radius. The guidebook's own layout is square throughout — 0 is the default.
+   The only non-zero radii in the file belong to device/sticker MOCKUPS. */
+--radius:0;
+--radius-sticker:25.575220108032227px;  /* Telegram sticker plate, Стикеры page */
+--radius-pill:100px;
+
+/* Clear space — Охранная зона: 2X around every logo version, where X is the
+   cap height of the wordmark; the ® keeps 1/4X. */
+--clearspace:2; /* @kind other */
+--clearspace-registered:0.25; /* @kind other */
+
+/* Shadows — the file uses three, all on mockups and stickers, never on layout */
+--shadow-soft:0 0 4px rgba(0,0,0,0.15);
+--shadow-mid:0 0 8px rgba(0,0,0,0.25);
+--shadow-hard:0 0 16px rgba(0,0,0,0.5);
+
+/* Motion. Nothing in the source animates; these are conservative defaults
+   for interactive work — see readme.md › Visual foundations › Animation. */
+--ease:cubic-bezier(0.2,0,0,1); /* @kind other */
+--duration-fast:120ms; /* @kind other */
+--duration:200ms; /* @kind other */
+}

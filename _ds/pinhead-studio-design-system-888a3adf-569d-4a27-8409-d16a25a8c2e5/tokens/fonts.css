@@ -1,0 +1,19 @@
+/* pinhead studio — webfonts.
+   The Гайдбук names two faces:
+     · Акцидентный шрифт (display)  — TT Bluescreens Black  (typetype.ru, commercial)
+     · Наборный шрифт  (text)       — Roboto Condensed      (Google Fonts)
+   The social/marketing templates additionally set Heading Pro Bold / Bold Italic
+   (Fontfabric, commercial) and, once each, Heading Compressed Pro and Aeonik Pro.
+
+   No font binaries ship with the .fig. TT Bluescreens and Heading Pro are now
+   self-hosted from fonts/ (uploaded); Roboto Condensed comes from Google Fonts.
+   All three faces the system uses are the real ones. */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300..700;1,300..700&family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+/* Акцидентный шрифт — self-hosted from the uploaded file. */
+@font-face{font-family:"TT Bluescreens";src:url('../fonts/tt-bluescreens-bold.otf') format('opentype');font-weight:400 900;font-style:normal;font-display:swap}
+
+/* Social/marketing headline face — self-hosted from the uploaded files. */
+@font-face{font-family:"Heading Pro";src:url('../fonts/HeadingPro-Bold.woff2') format('woff2'),url('../fonts/HeadingPro-Bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Heading Pro";src:url('../fonts/HeadingPro-BoldItalic.woff2') format('woff2'),url('../fonts/HeadingPro-BoldItalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}

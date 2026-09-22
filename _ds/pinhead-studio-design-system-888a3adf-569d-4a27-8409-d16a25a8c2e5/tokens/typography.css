@@ -1,0 +1,58 @@
+/* pinhead studio — typography tokens.
+   Sizes and tracking are the file's own values, unrounded. */
+:root{
+/* Families. All three are the real licensed faces: TT Bluescreens and
+   Heading Pro self-hosted from fonts/, Roboto Condensed from Google Fonts. */
+--font-display:"TT Bluescreens","Alumni Sans","Oswald",Impact,sans-serif;   /* Акцидентный шрифт — headings */
+--font-headline:"Heading Pro","Roboto Condensed",sans-serif;                /* social/marketing headlines */
+--font-text:"Roboto Condensed",-apple-system,"Segoe UI",Arial,sans-serif;   /* Наборный шрифт — body, captions */
+
+--fw-display:900; /* @kind font */
+--fw-headline:700; /* @kind font */
+--fw-text-regular:400;
+--fw-text-medium:500;
+--fw-text-semibold:600;
+--fw-text-bold:700;
+
+/* Tracking — the file uses exactly three values */
+--tracking-display:-0.010em;   /* TT Bluescreens headings */
+--tracking-headline:-0.020em;  /* Heading Pro headlines */
+--tracking-text:-0.030em;      /* Roboto Condensed running text */
+
+/* Leading */
+--leading-display:0.85;        /* 0.8500000238418579 in the source */
+--leading-text:1;
+
+/* Size scale, as used. Guidebook: 22 body, 120 page title.
+   Social/marketing: 40–130 headline, 22/25 caption. Editorial: 230–455. */
+--size-caption:19.147869110107422px;
+--size-body:22px;
+--size-body-lg:25px;
+--size-label-sm:25.60350227355957px;
+--size-32:32px;
+--size-35:35px;
+--size-40:40px;
+--size-45:45px;
+--size-50:50px;
+--size-55:55px;
+--size-75:75px;
+--size-80:80px;
+--size-86:86px;
+--size-100:100px;
+--size-page-title:120px;
+--size-130:130px;
+--size-hero:230px;
+--size-specimen:256.2465515136719px;
+--size-specimen-xl:455.0533447265625px;
+}
+
+/* ── Text styles ──────────────────────────────────────────────────────── */
+.ph-page-title{font-family:var(--font-display);font-weight:var(--fw-display);font-size:var(--size-page-title);line-height:var(--leading-display);letter-spacing:var(--tracking-display);text-transform:uppercase}
+.ph-hero{font-family:var(--font-display);font-weight:var(--fw-display);font-size:var(--size-hero);line-height:var(--leading-display);letter-spacing:var(--tracking-display);text-transform:uppercase}
+.ph-headline{font-family:var(--font-headline);font-weight:var(--fw-headline);font-style:italic;font-size:var(--size-55);line-height:1;letter-spacing:var(--tracking-headline);text-transform:uppercase}
+.ph-headline-lg{font-family:var(--font-headline);font-weight:var(--fw-headline);font-size:var(--size-100);line-height:1;letter-spacing:var(--tracking-headline);text-transform:uppercase}
+.ph-nav{font-family:var(--font-text);font-weight:var(--fw-text-medium);font-size:var(--size-body);line-height:1;letter-spacing:var(--tracking-text)}
+.ph-body{font-family:var(--font-text);font-weight:var(--fw-text-medium);font-size:var(--size-body);line-height:1;letter-spacing:var(--tracking-text)}
+.ph-body-regular{font-family:var(--font-text);font-weight:var(--fw-text-regular);font-size:var(--size-body);line-height:1;letter-spacing:var(--tracking-text)}
+.ph-caption{font-family:var(--font-text);font-weight:var(--fw-text-medium);font-size:var(--size-caption);line-height:1;letter-spacing:var(--tracking-text)}
+.ph-mono-label{font-family:var(--font-text);font-weight:var(--fw-text-bold);font-size:var(--size-body);line-height:1;letter-spacing:var(--tracking-headline);text-transform:uppercase}

@@ -1,0 +1,43 @@
+/* pinhead studio — colour tokens. Values transcribed from the Гайдбук v1.1
+   (Цвета / Основная палитра, Дополнительная палитра, Фирменный градиент). */
+:root{
+/* ── Base palette ─────────────────────────────────────────────────────── */
+--ph-black:#000000;            /* HEX 000000 */
+--ph-white:#FFFFFF;            /* HEX FFFFFF */
+--ph-blue:#1D19EA;             /* HEX 1D19EA · CMYK 88 89 0 8 */
+--ph-lime:#B4FB53;             /* HEX B4FB53 · CMYK 28 0 67 2 */
+--ph-lime-alt:#B5FC55;         /* second lime instance present in the file */
+
+/* ── Extended palette: main colours in 10% steps over white ──────────── */
+--ph-black-10:#E5E5E5;--ph-black-20:#CCCCCC;--ph-black-30:#B3B3B3;--ph-black-40:#999999;--ph-black-50:#808080;--ph-black-60:#666666;--ph-black-70:#4D4D4D;--ph-black-80:#333333;--ph-black-90:#1A1A1A;
+--ph-blue-10:#E8E8FD;--ph-blue-20:#D2D1FB;--ph-blue-30:#BBB9F8;--ph-blue-40:#A5A3F6;--ph-blue-50:#8E8CF4;--ph-blue-60:#7775F2;--ph-blue-70:#615FEF;--ph-blue-80:#4A47ED;--ph-blue-90:#3430EB;
+--ph-lime-10:#F7FEEE;--ph-lime-20:#F0FDDD;--ph-lime-30:#E8FDCB;--ph-lime-40:#E1FCBA;--ph-lime-50:#D9FDA9;--ph-lime-60:#D2FC98;--ph-lime-70:#CAFC86;--ph-lime-80:#C3FC75;--ph-lime-90:#BBFB64;
+
+/* ── Greys lifted verbatim from the file's own layouts and mockups ───── */
+--ph-grey-f4:#F4F4F4;--ph-grey-f1:#F1F1F1;--ph-grey-e5:#E5E5E5;--ph-grey-d9:#D9D9D9;--ph-grey-c3:#C3C3C3;--ph-grey-bf:#BFBFBF;--ph-grey-80:#808080;--ph-grey-39:#393939;--ph-grey-1a:#1A1A1A;
+
+/* ── Semantic aliases ─────────────────────────────────────────────────── */
+--surface-page:var(--ph-white);
+--surface-inverse:var(--ph-black);
+--surface-accent:var(--ph-blue);
+--surface-highlight:var(--ph-lime);
+--surface-muted:var(--ph-grey-f4);
+--text-primary:var(--ph-black);
+--text-inverse:var(--ph-white);
+--text-secondary:var(--ph-black-50);
+--text-accent:var(--ph-blue);
+--rule:var(--ph-black);              /* hairline rules are pure black/white */
+--rule-inverse:var(--ph-white);
+--focus:var(--ph-blue);
+
+/* ── Фирменный градиент — the chrome gradient ─────────────────────────── */
+--ph-gradient-chrome:linear-gradient(122.72deg,#000 7.38%,#FFF 58.85%,#000 90.63%); /* @kind color */
+--ph-gradient-chrome-steep:linear-gradient(162.861deg,#000 15.82%,#FFF 55.49%,#000 79.99%); /* @kind color */
+--ph-gradient-blue-fade:linear-gradient(180deg,#1D19EA 0%,#FFF 100%); /* @kind color */
+}
+
+/* Направление / direction scopes.
+   Retail (Розничное) runs the full four-colour palette.
+   Wholesale (Оптовое) drops lime: black, white and blue only. */
+[data-direction="retail"]{--surface-highlight:var(--ph-lime);}
+[data-direction="wholesale"]{--surface-highlight:var(--ph-blue);}
