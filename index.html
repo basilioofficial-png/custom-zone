@@ -93,9 +93,20 @@
           <span class="hero__price-label">Стоимость выезда</span>
           <span class="hero__price-value">от 50 000 ₽</span>
         </div>
-        <div class="hero__ctas">
-          <a class="btn btn--lime" href="#form" data-event="click_calc">Рассчитать стоимость</a>
-          <a class="btn btn--outline-white" href="#formats">Посмотреть форматы</a>
+        <div class="hero__right">
+          <div class="hero__ctas">
+            <a class="btn btn--lime" href="#form" data-event="click_calc">Рассчитать стоимость</a>
+            <a class="btn btn--outline-white" href="#formats">Посмотреть форматы</a>
+          </div>
+          <form class="hero-quick" id="hero-quick-form" novalidate>
+            <span class="hero-quick__label">Быстрая заявка на консультацию</span>
+            <div class="hero-quick__row">
+              <input class="hero-quick__input" type="text" name="name" placeholder="Ваше имя" autocomplete="name" required>
+              <input class="hero-quick__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" required>
+              <button class="btn btn--lime hero-quick__submit" type="submit">Отправить</button>
+            </div>
+            <p class="hero-quick__status" id="hero-quick-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </div>
@@ -122,7 +133,7 @@
           <div class="format-card__media">
             <picture>
               <source srcset="/assets/ph/press-transfers.webp" type="image/webp">
-              <img src="/assets/ph/press-transfers.jpg" alt="Термопресс и подготовленные DTF-трансферы" loading="lazy" width="1400" height="1050">
+              <img src="/assets/ph/press-transfers.jpg" alt="Термопресс и подготовленные DTF-трансферы" loading="lazy" width="1400" height="1867">
             </picture>
           </div>
           <div class="format-card__body">
@@ -334,7 +345,7 @@
           <div class="case-tile__media">
             <picture>
               <source srcset="/assets/ph/zone-wide.webp" type="image/webp">
-              <img src="/assets/ph/zone-wide.jpg" alt="Общий вид оформленной зоны" loading="lazy" width="900" height="675">
+              <img src="/assets/ph/zone-wide.jpg" alt="Общий вид оформленной зоны" loading="lazy" width="900" height="1200">
             </picture>
           </div>
           <figcaption>Станция нанесения</figcaption>
@@ -352,7 +363,7 @@
           <div class="case-tile__media">
             <picture>
               <source srcset="/assets/ph/screen.webp" type="image/webp">
-              <img src="/assets/ph/screen.jpg" alt="Оборудование на площадке" loading="lazy" width="900" height="675">
+              <img src="/assets/ph/screen.jpg" alt="Оборудование на площадке" loading="lazy" width="900" height="1200">
             </picture>
           </div>
           <figcaption>Оборудование</figcaption>

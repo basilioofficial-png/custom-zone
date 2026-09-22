@@ -166,6 +166,8 @@
     restoreDraft(leadForm);
   }
 
+  document.querySelectorAll('#hero-quick-form input[name="phone"], #footer-form input[name="phone"]').forEach(maskPhone);
+
   /* ── File attach ───────────────────────────────────────────────────── */
   var fileTrigger = document.getElementById('file-trigger');
   var fileInput = document.getElementById('file-input');
@@ -314,6 +316,50 @@
           submitBtn.classList.remove('btn--disabled');
           submitBtn.textContent = 'Получить расчёт';
           statusEl.textContent = 'Не удалось отправить, попробуйте ещё раз или напишите в Telegram.';
+        });
+    });
+  }
+
+  /* ── Hero quick-request form (same endpoint, minimal payload) ─────── */
+  var heroQuickForm = document.getElementById('hero-quick-form');
+  if (heroQuickForm) {
+    var heroQuickStatus = document.getElementById('hero-quick-status');
+
+    heroQuickForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = heroQuickForm.querySelector('input[name="name"]').value.trim();
+      var phone = heroQuickForm.querySelector('input[name="phone"]').value;
+
+      if (!name || digitsOnly(phone).length !== 11) {
+        heroQuickStatus.textContent = 'Укажите имя и телефон полностью — 11 цифр.';
+        return;
+      }
+
+      var submitBtn = heroQuickForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Отправляем…';
+      heroQuickStatus.textContent = '';
+
+      fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name,
+          phone: phone,
+          service: 'Выездная кастом-зона',
+          source: 'hero',
+          page_url: window.location.href
+        })
+      })
+        .then(function (res) { if (!res.ok) throw new Error('bad_response'); return res.json(); })
+        .then(function () {
+          track('form_submit_success', { source: 'hero' });
+          heroQuickForm.innerHTML = '<p style="color:#B4FB53;font-size:14px;margin:0">Спасибо! Мы свяжемся с вами в ближайшее время.</p>';
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Отправить';
+          heroQuickStatus.textContent = 'Не удалось отправить, попробуйте ещё раз.';
         });
     });
   }
