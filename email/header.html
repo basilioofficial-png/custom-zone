@@ -1,0 +1,31 @@
+<!-- ШАПКА РАССЫЛКИ PINHEAD
+     Вставляется в начало письма. Ширина 600px — стандарт для email.
+     Логотип: замените src на прямую ссылку на ваш PNG (SVG почтовики не показывают).
+     Картинку лучше загрузить в 2 раза крупнее (например 380×70), а в width/height оставить 190×35 —
+     тогда на телефонах и Retina-экранах она будет чёткой. -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background-color:#ffffff;">
+        <tr>
+          <!-- Левая колонка пустая: она той же ширины, что и правая, поэтому логотип стоит ровно по центру -->
+          <td width="150" style="width:150px;padding:20px 0 20px 20px;">&nbsp;</td>
+
+          <!-- Логотип по центру -->
+          <td align="center" valign="middle" style="padding:20px 0;">
+            <a href="https://pnhd.ru" target="_blank" style="text-decoration:none;">
+              <img src="https://ВАШ-САЙТ.ru/email/logo-pinhead.png"
+                   width="190" height="35" alt="pinhead"
+                   style="display:block;border:0;outline:none;width:190px;height:auto;font-family:Arial,Helvetica,sans-serif;font-size:28px;font-weight:bold;color:#000000;">
+            </a>
+          </td>
+
+          <!-- Телефон справа -->
+          <td width="150" align="right" valign="middle" style="width:150px;padding:20px 20px 20px 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:18px;color:#000000;white-space:nowrap;">
+            <a href="tel:+78127556235" style="color:#000000;text-decoration:none;">+78127556235</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
